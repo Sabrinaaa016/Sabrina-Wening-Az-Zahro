@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinjam</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f9;
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+          margin: 0;
+        }
+  
+        header {
+          background-color: #fdeaac;
+          color: black;
+          padding: 15px 20px;
+        }
+  
+        header .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+  
+        header h1 {
+          margin: 0;
+          font-size: 24px;
+          color: black;
+        }
+  
+        header nav a {
+          color: black;
+          margin-left: 15px;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 14px;
+        }
+  
+        header nav a:hover {
+          text-decoration: underline;
+        }
+  
+        section {
+          padding: 20px;
+          flex: 1;
+          display: flex; 
+          justify-content: center; 
+          align-items: center; 
+          flex-direction: column; 
+        }
+  
+        h1, h2, h3 {
+          color: #333;
+        }
+  
+        footer {
+          background-color: #fdeaac;
+          color: black;
+          padding: 10px 0;
+          text-align: center;
+          font-size: 14px;
+          margin-top: auto;
+        }
+
+        main {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form button {
+      background-color: #fdeaac
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #fdeaac;
+    }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #fdeaac;
+        }
+
+        .login-container .form-group input {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: ##fdeaac;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-container button:hover {
+            background-color: #fdeaac;
+        }
+
+        .transaction-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+        }
+    </style>
+    <script>
+        function validateTransactionForm() {
+            const fields = document.querySelectorAll('.transaction-form input, .transaction-form select');
+            let valid = true;
+
+            fields.forEach(field => {
+                if (!field.value) {
+                    valid = false;
+                    field.style.border = '1px solid red';
+                } else {
+                    field.style.border = '1px solid #ccc';
+                }
+            });
+
+            if (!valid) {
+                alert('Harap isi semua kolom!');
+            }
+
+            return valid;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <img src="logo.png"> 
+          <h1>My Library</h1>
+          <nav>
+            <a href="index.html">Home</a>
+            <a href="Profil.html">Profil</a>
+            <a href="Pinjam Buku.html">Pinjam</a>
+            <a href="login.html">login</a>
+          </nav>
+        </div>
+      </header>
+     <center> <h1>Ayo rajin membaca!</h1> </center>
+    <main>
+        <div class="transaction-container">
+            <h2>Formulir Peminjaman</h2>
+            <form class="transaction-form" action="#" method="POST" onsubmit="return validateTransactionForm()">
+                <div class="form-group">
+                    <label for="nama-transaksi">Nama Lengkap</label>
+                    <input type="text" id="nama-transaksi" name="nama-Lengkap" required>
+                </div>
+                <div class="form-group">
+                  <label for="nama-transaksi">Nama Buku</label>
+                  <input type="text" id="nama-transaksi" name="nama-transaksi" required>
+              </div>
+               <div class="form-group">
+                    <label for="tanggal-awal">Tanggal Awal Pinjam</label>
+                    <input type="date" id="tanggal-awal" name="tanggal-awal" required>
+                </div>
+                <div class="form-group">
+                    <label for="tanggal-akhir">Tanggal Pengembalian</label>
+                    <input type="date" id="tanggal-akhir" name="tanggal-akhir" required>
+                </div>
+                <div class="form-group">
+                    <label for="jumlah">Jumlah</label>
+                    <input type="number" id="jumlah" name="jumlah" required>
+                </div>
+                <div class="form-group">
+                    <label for="kategori">Kategori</label>
+                    <select id="kategori" name="kategori" required>
+                        <option value="">Pilih Kategori</option>
+                        <option value="Novel">Novel</option>
+                        <option value="Majalah">Majalah</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+                <button type="submit">Simpan</button>
+            </form>
+            <a href="Daftar pinjam.html">Daftar Transaksi</a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p style="display: inline-block; color: black; padding: 5px 10px; margin: 0; border-radius: 5px;">
+                &copy; Sabrina Wening Az Zahro - 2410117101403
+              </p>
+        </div>
+    </footer>
+</body>
+</html>

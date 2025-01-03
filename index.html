@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Library</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-image: url(perpus.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: black;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); 
+        z-index: -1; 
+      }
+
+      
+      header {
+        background-color: #fdeaac; 
+        color: black;
+        padding: 15px 20px;
+        font-family: Arial, sans-serif;
+      }
+
+      footer {
+        background-color: #fdeaac; 
+        color: black; 
+        padding: 10px 0; 
+        text-align: center; 
+        font-family: Arial, sans-serif; 
+        font-size: 14px; 
+        position: relative;
+        margin-top:auto
+      }
+
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      header nav a {
+        color: black;
+        margin-left: 15px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      header nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* Gaya untuk section */
+      section {
+        padding: 50px 20px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+
+      #home {
+        height: 75vh; /* Tinggi penuh layar */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        text-align: center;
+        color: white;
+      }
+
+      #pendaftaran h2 {
+        font-size: 28px;
+        color: #fdeaac;
+        margin-bottom: 20px;
+      }
+
+      #pendaftaran p {
+        font-size: 16px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <img src="logo.png">             
+       <h1>My Library</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="Profil.html">Profil</a>
+          <a href="Pinjam Buku.html">Pinjam</a>
+          <a href="login.html">login</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section Home -->
+    <section id="home">
+      <div>
+        <h1>Selamat Datang My Library</h1>
+        <p>Selamat datang di situs resmi My Library. Temukan informasi lengkap tentang layanan kami di sini.</p>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <p style="display: inline-block; color: black; padding: 5px 10px; margin: 0; border-radius: 5px;">
+                &copy; Sabrina Wening Az Zahro - 2410117101403
+              </p>
+        </div>
+    </footer>
+  </body>
+</html>

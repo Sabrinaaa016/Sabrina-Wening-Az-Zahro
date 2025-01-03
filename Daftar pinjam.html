@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Pinjam</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f9;
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+          margin: 0;
+        }
+  
+        header {
+          background-color: #fdeaac;
+          color: black;
+          padding: 15px 20px;
+        }
+  
+        header .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+  
+        header h1 {
+          margin: 0;
+          font-size: 24px;
+          color: black;
+        }
+  
+        header nav a {
+          color: black;
+          margin-left: 15px;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 14px;
+        }
+  
+        header nav a:hover {
+          text-decoration: underline;
+        }
+  
+        section {
+          padding: 20px;
+          flex: 1;
+          display: flex; 
+          justify-content: center; 
+          align-items: center; 
+          flex-direction: column; 
+        }
+  
+        h1, h2, h3 {
+          color: #333;
+        }
+  
+        footer {
+          background-color: #fdeaac;
+          color: black;
+          padding: 10px 0;
+          text-align: center;
+          font-size: 14px;
+          margin-top: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+  </style>
+</head>
+<body>
+  <header>
+      <div class="container">
+        <img src="logo.png"> 
+        <h1>My Library</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="Profil.html">Profil</a>
+          <a href="Pinjam Buku.html">Pinjam</a>
+          <a href="login.html">login</a>
+        </nav>
+      </div>
+    </header>
+    <section>
+        <!-- Tabel Pinjam Buku -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Nama Buku</th>
+                        <th>Tanggal Pinjam</th>
+                        <th>Tanggal Pengembalian</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Siti</td>
+                        <td>Hujan - tere liye</td>
+                        <td>1 Januari 2023</td>
+                        <td>3 Januari 2023</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ujang</td>
+                        <td>Laut Bercerita - Leila S. Chudori</td>
+                        <td>29 Februari 2023</td>
+                        <td>3 Marer 2023</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Riska</td>
+                        <td>Bumi - Tere Liye</td>
+                        <td>10 Mei 2023</td>
+                        <td>15 Mei 2023</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Dudung</td>
+                        <td>Filosofi Teras - Henry Manampiring</td>
+                        <td>1 Juni 2023</td>
+                        <td>5 Juni 2023</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <p style="display: inline-block; color: black; padding: 5px 10px; margin: 0; border-radius: 5px;">
+                &copy; Sabrina Wening Az Zahro - 2410117101403
+              </p>
+        </div>
+    </footer>
+</body>
+</html>
